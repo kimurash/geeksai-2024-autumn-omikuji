@@ -181,8 +181,9 @@ document.getElementById("omikujiButton").addEventListener("click", function () {
 
             // おみくじの内容を画面に表示
             document.getElementById("omikujiTitle").textContent = lectures[index].title;
-            document.getElementById("omikujiDetails").textContent =
-                `${lectures[index].time}, ${lectures[index].company}, ホール: ${lectures[index].hall}`;
+            document.getElementById("lectureTime").textContent = `時間: ${lectures[index].time}`;
+            document.getElementById("lectureCompany").textContent = `会社名: ${lectures[index].company}`;
+            document.getElementById("lectureHall").textContent = `ホール: ${lectures[index].hall}`;
 
             count++;
 
@@ -195,8 +196,9 @@ document.getElementById("omikujiButton").addEventListener("click", function () {
             const finalLecture = lectures[index];
             // 最終結果の表示
             document.getElementById("omikujiTitle").textContent = finalLecture.title;
-            document.getElementById("omikujiDetails").textContent =
-                `${finalLecture.time}, ${finalLecture.company}, ホール: ${finalLecture.hall}`;
+            document.getElementById("lectureTime").textContent = `時間: ${lectures[index].time}`;
+            document.getElementById("lectureCompany").textContent = `会社名: ${lectures[index].company}`;
+            document.getElementById("lectureHall").textContent = `ホール: ${lectures[index].hall}`;
 
             // ボタンを有効化/表示する設定
             omikujiButton.disabled = false; // おみくじボタンを有効化
